@@ -8,4 +8,9 @@ public class Answer {
     public String getNameAnswer() {
         return nameAnswer;
     }
+
+    @Override
+    public String toString() {
+        return nameAnswer;
+    }
 }
