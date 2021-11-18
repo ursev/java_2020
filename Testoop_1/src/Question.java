@@ -9,10 +9,16 @@ public class Question {
         this.correctAnswer = correctAnswer;
     }
 
-    public String getNameQuestion() {
+    public String getNameQuestion() {   //Метод не используется
         return nameQuestion;
     }
-    public Answer[] getListAnswers() {
+
+    @Override
+    public String toString() {
+        return nameQuestion;
+    }
+
+    public Answer[] getListAnswers() {   //Метод не используется
         return listAnswers;
     }
     public Answer getCorrectAnswer() {

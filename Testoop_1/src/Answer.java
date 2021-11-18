@@ -5,7 +5,7 @@ public class Answer {
         this.nameAnswer = nameAnswer;
 }
 
-    public String getNameAnswer() {
+   public String getNameAnswer() {   //Метод не используется
         return nameAnswer;
     }
 
