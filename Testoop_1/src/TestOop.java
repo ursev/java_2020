@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class TestOop {
 
+
     public static void main(String[] args) {
         System.out.println("Тест на знание героев в мультфильме Простоквашино.\n");
 
@@ -40,7 +41,7 @@ public class TestOop {
             Scanner scan = new Scanner(System.in);
             inputAnswer[q] = new Answer(scan.nextLine());
             System.out.println(inputAnswer[q]);
-            if (inputAnswer[q] == rightAnswers[q]) {   // Не работает сравнение. Пока не пойму почему?
+            if (rightAnswers[q].equals(inputAnswer[q])) {   // Не работает сравнение.  (inputAnswer[q] == rightAnswers[q])
                 testResult++;
                 System.out.println("Правильный ответ на вопрос");
             } else {
@@ -48,8 +49,8 @@ public class TestOop {
             }
         }
             System.out.println("Количество правильных ответов: " + testResult);
-            System.out.println(Arrays.toString(inputAnswer)); // Строка для проверки "что я ввел?".
-            System.out.println(Arrays.toString(rightAnswers)); // Строка для проверки "что в массиве правильных ответов".
+            //System.out.println(Arrays.toString(inputAnswer)); // Строка для проверки "что я ввел?".
+            //System.out.println(Arrays.toString(rightAnswers)); // Строка для проверки "что в массиве правильных ответов".
         }
     }
 
