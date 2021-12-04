@@ -2,9 +2,13 @@ import java.util.*;
 
 public class Find {
     public static void main(String[] args) {
-            Client client1 = new Client("Иванов", 25);
-            Client client2 = new Client("Петров", 35);
-            Client client3 = new Client("Сидоров", 50);
+            LocalDate age1 = LocalDate.of(2019, Month.FEBRUARY, 22);
+            LocalDate age2 = LocalDate.of(1985, Month.FEBRUARY, 22);
+            LocalDate age3 = LocalDate.of(2000, Month.FEBRUARY, 22);
+
+            Client client1 = new Client("Иванов",age1);
+            Client client2 = new Client("Петров",age2);
+            Client client3 = new Client("Сидоров",age3);
 
             Account account1 = new Account(1);
             Account account2 = new Account(2);
