@@ -22,6 +22,6 @@ public class Bank {
             }
         }
 
-        return new Client("", 0);
+        return null;
     }
 }
