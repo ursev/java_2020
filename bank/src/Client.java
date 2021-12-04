@@ -8,7 +8,10 @@ public class Client {
     private int age;
     private List<Account> accounts = new ArrayList<>();
 
-    public Client(String name, int age) {
+    public Client(String name, int age) throws IllegalArgumentException {
+        if (age < 18) {
+            throw new IllegalArgumentException("Возраст должен быть 18 лет");
+        }
         this.name = name;
         this.age = age;
     }
