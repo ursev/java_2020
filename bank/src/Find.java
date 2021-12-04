@@ -1,7 +1,11 @@
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
 import java.util.*;
 
 public class Find {
     public static void main(String[] args) {
+
             LocalDate birthDate1 = LocalDate.of(2019, Month.FEBRUARY, 22);
             LocalDate birthDate2 = LocalDate.of(1985, Month.FEBRUARY, 22);
             LocalDate birthDate3 = LocalDate.of(2000, Month.FEBRUARY, 22);
@@ -10,6 +14,7 @@ public class Find {
             Period age2 = Period.between(birthDate2, now);
             Period age3 = Period.between(birthDate3, now);
 
+            try {
             Client client1 = new Client("Иванов",age1.getYears());
             Client client2 = new Client("Петров",age2.getYears());
             Client client3 = new Client("Сидоров",age3.getYears());
@@ -40,5 +45,9 @@ public class Find {
             System.out.println(bank.findClient(account3));
             System.out.println(bank.findClient(account4));
             System.out.println(bank.findClient(account5));
+            } catch (IllegalArgumentException e) {
+                    System.out.println("ОШИБКА");
+            }
+
     }
 }
