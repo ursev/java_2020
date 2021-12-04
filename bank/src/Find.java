@@ -2,13 +2,17 @@ import java.util.*;
 
 public class Find {
     public static void main(String[] args) {
-            LocalDate age1 = LocalDate.of(2019, Month.FEBRUARY, 22);
-            LocalDate age2 = LocalDate.of(1985, Month.FEBRUARY, 22);
-            LocalDate age3 = LocalDate.of(2000, Month.FEBRUARY, 22);
+            LocalDate birthDate1 = LocalDate.of(2019, Month.FEBRUARY, 22);
+            LocalDate birthDate2 = LocalDate.of(1985, Month.FEBRUARY, 22);
+            LocalDate birthDate3 = LocalDate.of(2000, Month.FEBRUARY, 22);
+            LocalDate now = LocalDate.now();
+            Period age1 = Period.between(birthDate1, now);
+            Period age2 = Period.between(birthDate2, now);
+            Period age3 = Period.between(birthDate3, now);
 
-            Client client1 = new Client("Иванов",age1);
-            Client client2 = new Client("Петров",age2);
-            Client client3 = new Client("Сидоров",age3);
+            Client client1 = new Client("Иванов",age1.getYears());
+            Client client2 = new Client("Петров",age2.getYears());
+            Client client3 = new Client("Сидоров",age3.getYears());
 
             Account account1 = new Account(1);
             Account account2 = new Account(2);
